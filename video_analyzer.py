@@ -1,28 +1,22 @@
 #!/usr/bin/env python
-"""video_analyzer.py — single consolidated Mistral vision video analyzer.
+"""video_analyzer.py — consolidated Mistral vision video analyzer.
 
-Distilled from three prototype versions (v1/v2/v3) after live testing on an
-18.3s Snapchat clip with mistral-small-2603. What survived and why:
+fps=2.0 + explicit OCR instructions beat model choice on real footage
+(verified live: caught "902"/"978" scores that 1fps missed). Frames are sent
+in batches of <=8 with inline timestamps; batch notes are merged into a final
+facts-vs-interpretation report.
 
-- fps=2.0        : at 1fps the model MISSED on-screen scores ("902"); 2fps caught
-                   them. Sampling rate matters more than model choice.
-- auto-batching  : API caps 8 images/request; frames split into <=8 batches,
-                   partial descriptions merged in a final text pass.
-- two-stage      : stage 1 = strict extraction per batch (exact text, people,
-                   actions); stage 2 = merge + facts-vs-interpretation report
-                   with evidence citation to suppress hallucinated specifics.
-- chunking       : only engages when the frame count exceeds what fits in a
-                   reasonable number of batches; keeps long-video cost linear.
-- cost tracking  : pre-call estimate from Vision.md formula + actual usage
-                   from the API, printed every run.
-
-Audio is intentionally not part of this pipeline.
+Every run writes a full audit trail under .runs/:
+  run.json, frames/*.jpg + manifest.json,
+  turns/batch_NN.json (instruction + frame refs + response),
+  turns/merge.json (instructions + received prompt + merged description).
 
 Usage:
     export MISTRAL_API_KEY=...
     python video_analyzer.py video.mp4                    # full report
     python video_analyzer.py video.mp4 --numbers-only     # just extract text/scores
     python video_analyzer.py video.mp4 --fps 1 --max-frames 20   # cheap mode
+    python video_analyzer.py video.mp4 --no-trace         # skip .runs/ audit trail
 """
 import argparse
 import json
@@ -33,8 +27,10 @@ import time
 sys.path.insert(0, os.path.dirname(__file__))
 
 from mistral_models import get_client, get_rate_limiter, DEFAULT_VISION
-from core import sample_frames, describe_frames
-from cost import fmt_eur
+from core import sample_frames, describe_frames, _chat_with_retry
+from cost import fmt_eur, cost_from_usage
+from prompts import get_template
+from trace import RunTrace
 
 EXTRACT_PROMPT = (
     "These are consecutive sampled frames from ONE video, in chronological order.\n"
@@ -72,44 +68,62 @@ def main():
                     help="skip the report; just dump every piece of on-screen text")
     ap.add_argument("--out", default=None, help="JSON output path")
     ap.add_argument("--api-key", default=None)
+    ap.add_argument("--no-trace", action="store_true",
+                    help="do not write the .runs/ audit trail")
     args = ap.parse_args()
 
     client = get_client(args.api_key)
     rl = get_rate_limiter(args.model)
+    trace = None if args.no_trace else RunTrace(args.video)
     t0 = time.time()
 
-    frames, duration = sample_frames(args.video, args.fps, args.max_frames)
-    print(f"video: {duration:.1f}s -> {len(frames)} frames @ {args.fps}fps", file=sys.stderr)
+    if trace is not None:
+        trace.set_meta(video=os.path.abspath(args.video), model=args.model,
+                       fps=args.fps, max_frames=args.max_frames,
+                       mode="numbers" if args.numbers_only else "report",
+                       started_at=time.strftime("%Y-%m-%dT%H:%M:%S"))
 
-    rl.wait()
+    frames, duration = sample_frames(args.video, args.fps, args.max_frames,
+                                     trace=trace)
+    print(f"video: {duration:.1f}s -> {len(frames)} frames @ {args.fps}fps", file=sys.stderr)
+    if trace is not None:
+        trace.write_manifest()
+
+    desc = report = None
     if args.numbers_only:
-        from prompts import get_template
-        desc, cost = describe_frames(client, frames, get_template("numbers"), args.model)
+        merged, cost = describe_frames(client, frames, get_template("numbers"),
+                                       args.model, rate_limiter=rl, trace=trace)
+        desc = merged
         print(desc)
     else:
-        # Stage 1 happens inside describe_frames (batched extraction+merge);
-        # we then run one grounding pass over the merged description.
         merged, cost = describe_frames(client, frames, EXTRACT_PROMPT, args.model,
-                                       est_output_tokens=800)
+                                       rate_limiter=rl, est_output_tokens=800,
+                                       trace=trace)
         act = (cost.get("actual") or {}).get("total_eur") or 0.0
         print(f"[stage 1 cost] {fmt_eur(act)}", file=sys.stderr)
 
-        srl = get_rate_limiter(args.model)
-        srl.wait()
-        from core import _chat_with_retry
         resp = _chat_with_retry(client, args.model, [{"role": "user", "content": [
                 {"type": "text", "text": MERGE_PROMPT},
                 {"type": "text", "text": merged},
-            ]}])
+            ]}], rate_limiter=get_rate_limiter(args.model))
         report = resp.choices[0].message.content
         mu = getattr(resp, "usage", None)
         extra = 0.0
         if mu is not None:
-            from cost import cost_from_usage
             extra = cost_from_usage(mu, args.model)["total_eur"]
         print(report)
         print(f"\n[total cost] {fmt_eur(act + extra)}", file=sys.stderr)
         cost["actual"]["total_eur"] = act + extra
+
+        # record the report pass as an extra merge-style turn for full replay
+        if trace is not None:
+            trace.record_merge_turn(
+                MERGE_PROMPT, merged, report, mu)
+
+    if trace is not None:
+        wall = round(time.time() - t0, 1)
+        trace.finalize(extra={"wall_seconds": wall, "cost": cost})
+        print(f"trace: {trace.dir}", file=sys.stderr)
 
     if args.out:
         payload = {

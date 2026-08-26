@@ -31,3 +31,6 @@ Thumbs.db
 # NOTE: .archive/ and .references/ are INTENTIONALLY tracked (hidden folders).
 # .archive/    — superseded prototypes, scratch scripts, per-run output artifacts
 # .references/ — cloned research repos (gitlinks, not expanded trees)
+
+# Per-run audit trails
+.runs/
