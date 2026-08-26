@@ -1,0 +1,29 @@
+{
+  "video": "/home/shiro/Downloads/Snapchat-1581139204.mp4",
+  "model": "mistral-small-2603",
+  "fps": 2.0,
+  "num_frames": 37,
+  "mode": "report",
+  "cost": {
+    "estimate": {
+      "tokens_per_image": 1176,
+      "input_tokens": 43512,
+      "output_tokens_est": 800,
+      "input_cost_eur": 0.00522144,
+      "output_cost_eur": 0.0004,
+      "total_eur": 0.00562144,
+      "price_input_per_M": 0.12,
+      "price_output_per_M": 0.5
+    },
+    "actual": {
+      "input_tokens": 51661,
+      "cached_input_tokens": 0,
+      "output_tokens": 5379,
+      "input_cost_eur": 0.0061993199999999995,
+      "output_cost_eur": 0.0026895,
+      "total_eur": 0.009478859999999999
+    },
+    "batches": 6
+  },
+  "report": "### **Final Report**\n\n---\n\n## **Summary**\nThe video begins indoors at a fairground or amusement arcade, featuring a single adult male in a white t-shirt, dark shorts, and a white cap, with Red Bull branding visible in the background. The scene transitions to an outdoor nighttime event booth where the same individual, now wearing white sneakers, stands near energy drink logos (Red Bull, BOXER, Monster, etc.). The setting shifts indoors to an arcade with a boxing-themed machine displaying scores (\"902,\" \"978\") and point values (\"100\" to \"1000\"). Later, two adults (a male and female) play arcade games in a neon-lit indoor arcade. The video then moves to an outdoor stadium at night, followed by an indoor sports venue where two individuals stand near a Red Bull backdrop and a scoreboard displaying numbers (\"902,\" \"978,\" etc.).\n\n---\n\n## **Timeline**\n\n| Time-Range | Scene | People | Key Action |\n|------------|-------|--------|------------|\n| Start | Indoor fairground/arcade | 1 adult male (white t-shirt, dark shorts, white cap) | Standing, interacting with something in front |\n| Transition | Outdoor nighttime event booth | 1 adult male (now in white sneakers) | Standing near energy drink logos and booth equipment |\n| Transition | Indoor arcade (neon-lit) | 1 adult male (hand visible) | Playing a boxing-themed arcade machine (scores: \"902,\" \"978\") |\n| Transition | Indoor arcade (neon-lit) | 2 adults (male & female, both in white t-shirts, dark pants) | Playing arcade games with control devices |\n| Transition | Outdoor stadium/arena (night) | Multiple individuals (various clothing) | Walking, standing, or moving in background |\n| End | Indoor sports/entertainment venue | 2 adults (one in red shirt, one in white shirt, dark pants) | Standing near Red Bull backdrop and scoreboard |\n\n---\n\n## **On-screen Text & Numbers**\n\n- **\"BOXER\"** (arcade machine, backdrop)\n- **\"Red Bull\"** (banners, backdrop)\n- **\"BOXER\"** (scoreboard)\n- **\"Red Bull\"** (scoreboard backdrop)\n- **\"Monster\"** (event booth branding)\n- **\"MONSTER Energy\"** (event booth branding)\n- **\"7-Eleven\"** (event booth branding)\n- **\"Red Bull Racing\"** (event booth branding)\n- **\"902\"** (arcade machine score, scoreboard)\n- **\"978\"** (arcade machine score, scoreboard)\n- **\"100\"** to **\"1000\"** (point values on arcade machine)\n- **\"200\"**, **\"300\"**, **\"400\"**, **\"500\"**, **\"600\"**, **\"700\"**, **\"800\"** (scoreboard numbers)\n\n---\n\n## **Observed Facts**\n- The video begins indoors at a fairground/arcade with bright artificial lighting.\n- A single adult male is present in the first scene (white t-shirt, dark shorts, white cap).\n- Red Bull branding is visible in the first indoor scene.\n- The scene transitions to an outdoor nighttime event booth with energy drink logos (Red Bull, BOXER, Monster, etc.).\n- The same individual (now in white sneakers) is present at the event booth.\n- The booth includes digital screens, a Monster Energy drink cooler, cardboard boxes, and green plants.\n- The setting shifts to an indoor arcade with neon lighting and a boxing-themed machine.\n- The arcade machine displays scores (\"902,\" \"978\") and point values (\"100\" to \"1000\").\n- Two adults (male and female, both in white t-shirts, dark pants) play arcade games in a neon-lit indoor arcade.\n- The video transitions to an outdoor stadium/arena at night with multiple individuals in the background.\n- The final scene is indoors at a sports/entertainment venue with a Red Bull backdrop.\n- A scoreboard in the final scene displays numbers (\"902,\" \"978,\" \"100\" to \"800\").\n- Two individuals (one in red shirt, one in white shirt, dark pants) are present in the final scene.\n\n---\n\n## **Plausible Interpretation**\n**Inference:** The video documents a promotional event or tournament involving the \"BOXER\" brand, likely sponsored by Red Bull and Monster Energy. The presence of arcade machines, scoreboards, and event booths suggests an interactive gaming or sports-related gathering, possibly a boxing-themed arcade competition or esports event. The consistent branding and recurring numbers (\"902,\" \"978\") may indicate a scoring system or leaderboard for the event."
+}

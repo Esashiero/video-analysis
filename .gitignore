@@ -21,28 +21,13 @@ build/
 .env.*
 !.env.example
 
-# Output artifacts (regenerated per run)
-snap*.json
-snap*.md
-snapchat_desc*.json
-*.log
-
-# Embedded cloned research repos — keep dirs, exclude their .git
-ressources/*/.git/
-ressources/*/.gitignore
-ressources/*/LICENSE
-ressources/*/README*
-ressources/*/docs/
-ressources/*/examples/
-ressources/*/tests/
-ressources/*/node_modules/
-ressources/*/venv/
-ressources/*/requirements*.txt
-ressources/*/setup.*
-ressources/*/pyproject.toml
-ressources/*/.github/
-ressources/*/Makefile
+# Ruff auto-backups
+.backups/
 
 # OS
 .DS_Store
 Thumbs.db
+
+# NOTE: .archive/ and .references/ are INTENTIONALLY tracked (hidden folders).
+# .archive/    — superseded prototypes, scratch scripts, per-run output artifacts
+# .references/ — cloned research repos (gitlinks, not expanded trees)

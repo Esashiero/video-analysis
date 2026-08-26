@@ -1,0 +1,29 @@
+{
+  "video": "/home/shiro/Downloads/Snapchat-1166079200.mp4",
+  "model": "mistral-small-2603",
+  "fps": 2.0,
+  "num_frames": 106,
+  "mode": "report",
+  "cost": {
+    "estimate": {
+      "tokens_per_image": 1176,
+      "input_tokens": 124656,
+      "output_tokens_est": 800,
+      "input_cost_eur": 0.01495872,
+      "output_cost_eur": 0.0004,
+      "total_eur": 0.01535872,
+      "price_input_per_M": 0.12,
+      "price_output_per_M": 0.5
+    },
+    "actual": {
+      "input_tokens": 148827,
+      "cached_input_tokens": 0,
+      "output_tokens": 15622,
+      "input_cost_eur": 0.01785924,
+      "output_cost_eur": 0.007811,
+      "total_eur": 0.0262881
+    },
+    "batches": 15
+  },
+  "report": "Here\u2019s the structured report based on the provided notes:\n\n---\n\n### **Summary**\nThe video begins at an outdoor event space at night, featuring branded tents (Red Bull, Boxer, Monster) and neon lighting. A man in a white T-shirt, black pants, and cap stands near a Red Bull tent, checking his phone. A woman joins him, and digital scoreboards display numbers like \"9.18\" and \"700\". The scene shifts to an indoor arcade with boxing-themed games, then to an outdoor amusement area with an inflatable boxing booth. Later segments show the man in different outfits near energy drink displays, both indoors and outdoors. The video concludes with gaming machines and branded coolers in a brightly lit event space.\n\n---\n\n### **Timeline**\n\n| Time-Range       | Scene                          | People                          | Key Action                          |\n|------------------|--------------------------------|---------------------------------|-------------------------------------|\n| Start (Night)    | Outdoor event space            | Man (white T-shirt, black pants, cap) | Holding cup, checking phone         |\n|                  |                                | Woman (white T-shirt, black pants) | Joins man, holding drinks           |\n|                  |                                | (Unseen crowd)                  | Digital scoreboards display numbers |\n| Mid (Indoors)    | Arcade/entertainment center    | Man (white T-shirt, khaki shorts, white sneakers) | Near arcade machines, possibly gaming |\n|                  |                                | (Unseen staff)                  | Red Bull umbrella visible           |\n| Later (Night)    | Outdoor amusement/carnival     | Man (white T-shirt, dark shorts, white sneakers) | Stands on platform near inflatable boxing booth |\n|                  |                                | (Unseen attendees)              | Branded boxes (Red Bull, Boxer, Monster) present |\n| Later (Indoors)  | Arcade/entertainment center    | Man (white T-shirt, dark shorts, white sneakers) | Near game cabinets; backpack on floor |\n| Later (Night)    | Outdoor event space            | Man (white sleeveless shirt, dark shorts, white socks/sneakers) | Near Red Bull tent; Monster cans/crates nearby |\n| Later (Night)    | Outdoor event space            | Multiple people                 | Branded tents; scoreboards show \"896\", \"700\", etc. |\n| Final (Indoors)  | Arcade/entertainment center    | Man (white \"ESSENTIALS\" T-shirt, light blue shorts, white socks/sneakers) | Near Monster Boxer cooler; bends forward |\n| Final (Outdoors) | Event space                    | (Unseen people)                 | Gaming machines (Red Bull Boxing, Monster); wooden crates, cables |\n\n---\n\n### **On-screen Text & Numbers**\n- **\"9.18\"** (Outdoor event space, scoreboard)\n- **\"700\"** (Outdoor event space, scoreboard)\n- **\"600\"** (Outdoor event space, scoreboard)\n- **\"896\"** (Outdoor event space, scoreboard)\n- **\"838\"** (Outdoor event space, scoreboard)\n- **\"11\"** (Outdoor event space, scoreboard)\n- **\"ESSENTIALS\"** (Man\u2019s T-shirt, indoor arcade)\n\n---\n\n### **Observed Facts**\n- Outdoor event space at night with neon/stage lighting.\n- Branded tents/booths for Red Bull, Boxer, and Monster Energy.\n- A man in a white T-shirt, black pants, and cap appears in early segments.\n- Digital scoreboards display numeric scores (e.g., \"9.18\", \"700\").\n- A woman in a white T-shirt and black pants joins the man.\n- Indoor arcade/entertainment center with boxing-themed games.\n- Man appears in multiple outfits (khaki shorts, dark shorts, sleeveless shirt, \"ESSENTIALS\" T-shirt).\n- Red Bull-branded items (tent, umbrella, cooler) are prominent.\n- Monster Energy cans, cardboard boxes, and plastic crates are visible.\n- Outdoor amusement area with inflatable boxing booth.\n- Backpack and sneakers are seen on the floor indoors.\n- Gaming machines labeled \"Red Bull Boxing\" and \"Monster-themed\".\n- Wooden crates, potted plants, and cables are present in final outdoor scene.\n\n---\n\n### **Plausible Interpretation**\n**Inference:** The video documents a promotional event for energy drinks (Red Bull, Boxer, Monster), likely tied to gaming or interactive experiences. The recurring presence of the man suggests he may be an organizer, participant, or staff member. The scoreboards and gaming machines imply competitive or interactive elements, possibly a tournament or demo event. The varied outfits of the man indicate different segments or days of the event."
+}

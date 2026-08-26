@@ -1,0 +1,29 @@
+{
+  "video": "/home/shiro/Downloads/Snapchat-1738064943.mp4",
+  "model": "mistral-small-2603",
+  "fps": 2.0,
+  "num_frames": 66,
+  "mode": "report",
+  "cost": {
+    "estimate": {
+      "tokens_per_image": 1176,
+      "input_tokens": 77616,
+      "output_tokens_est": 800,
+      "input_cost_eur": 0.00931392,
+      "output_cost_eur": 0.0004,
+      "total_eur": 0.00971392,
+      "price_input_per_M": 0.12,
+      "price_output_per_M": 0.5
+    },
+    "actual": {
+      "input_tokens": 94478,
+      "cached_input_tokens": 0,
+      "output_tokens": 11881,
+      "input_cost_eur": 0.011337360000000001,
+      "output_cost_eur": 0.0059405,
+      "total_eur": 0.01779052
+    },
+    "batches": 10
+  },
+  "report": "Here\u2019s the final report based on the provided extraction notes:\n\n---\n\n### **Summary**\nThe video chronicles a Red Bull-branded gaming event across multiple settings, beginning indoors in an arena with a lone figure adjusting equipment. It transitions to an outdoor festival space featuring a \"BOXER\" arcade machine and Red Bull branding. The scene shifts to an indoor gaming lounge with a racing simulator, then to a boxing gym with a digital scoreboard. Later, an indoor skateboarding event appears, followed by an outdoor festival booth with a claw machine. The video concludes at an amusement park under neon lights.\n\n---\n\n### **Timeline**\n\n| Time-Range | Scene | People | Key Action |\n|------------|-------|--------|------------|\n| Start | Indoor arena with bright artificial lighting | 1 adult male (face blurred) | Adjusting equipment near his face |\n| Transition | Outdoor event space (night) | 2 adults (white t-shirts, shorts) | Observing \"BOXER\" arcade machine |\n| Indoor lounge | Dim neon/LED-lit bar/pub | 1 man (white t-shirt, dark shorts) | Observing Red Bull racing simulator |\n| Boxing gym | Bright overhead lighting | 1 man (white t-shirt, blue shorts) | Standing near digital scoreboard |\n| Skateboarding | Indoor gymnasium | 1 man (red long-sleeve, blue jeans) | Holding skateboard; screen displays scores |\n| Festival booth | Outdoor carnival | 1 man (red shirt, jeans) | Interacting with \"BOXER\" claw machine |\n| Finale | Amusement park (night) | 1 man (red shirt, dark pants) | Standing; \"LUZ\" visible in background |\n\n---\n\n### **On-screen Text & Numbers**\n- **\"978\"** (arcade machine, boxing gym, claw machine)\n- **\"700\"** (arcade machine)\n- **\"829\"** (racing simulator)\n- **\"832\"** (boxing gym)\n- **\"FULL THROTTLE SCORE\"** (racing simulator)\n- **\"POLICE\"** (racing simulator)\n- **\"BOXER\"** (arcade machine, scoreboard, claw machine)\n- **\"MONSTER\"** (scoreboard)\n- **\"Red Bull Racing\"** (arcade machine, simulator, booth)\n- **\"Formula One\"** (arcade machine)\n- **\"BOWLER\"** (skateboarding screen)\n- **\"9\"**, **\"15\"** (skateboarding screen)\n- **\"989\"** (skateboarding screen)\n- **\"NAPOL\"** (festival booth signage)\n- **\"LUZ\"** (finale background)\n\n---\n\n### **Observed Facts**\n- Red Bull branding appears consistently across all scenes (logos, machines, signage).\n- Multiple gaming activities are featured: arcade boxing (\"BOXER\"), racing simulator, claw machine, and skateboarding.\n- Participants wear casual athletic clothing (t-shirts, shorts, sneakers) with Red Bull or event-specific branding.\n- Lighting shifts from bright indoor/arena lighting to neon-lit outdoor nights.\n- Digital scoreboards and screens display scores (e.g., \"978,\" \"829\") and game-related text.\n- Outdoor scenes include festival/carnival elements (tents, prizes, artificial plants).\n- Indoor scenes include a bar/pub, gaming lounge, and gymnasium.\n\n---\n### **Plausible Interpretation**\n**Inference:** The video documents a Red Bull-sponsored gaming tour or promotional event, showcasing interactive experiences (arcade, simulator, skateboarding) across diverse venues (arena, festival, gym, amusement park). The consistent branding and scoring systems suggest a competitive or high-score-driven format, likely aimed at engaging attendees in branded gaming activities."
+}

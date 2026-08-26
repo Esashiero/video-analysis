@@ -1,0 +1,27 @@
+{
+  "model": "mistral-small-2603",
+  "duration_sec": 18.3,
+  "num_frames": 19,
+  "description": "Here\u2019s a merged, coherent, and chronological description of the whole video, removing redundancy and ensuring a smooth narrative flow:\n\n---\n\nThe video begins with a lively outdoor event, likely a festival or fair, held at night. The setting features a stage adorned with vibrant lighting, colorful banners, and signs, including prominent sponsorship by \"Red Bull\" and \"BOXXER,\" indicating a boxing or combat sports-themed event. Attendees and event staff are visible, with one individual in a white shirt and cap walking around while on a phone call, and another person in a red shirt seen in the distance, possibly preparing for an event or engaging in conversation.\n\nAs the scene transitions, the video shifts indoors to a brightly lit arcade or family entertainment center, filled with neon lights and arcade game machines. A child is actively playing a boxing-themed game, using motion sensors or controllers, while wearing a headband as part of the game\u2019s costume. The game interface displays a score that increases as the child plays, with onlookers\u2014including another child and an adult\u2014observing and possibly cheering them on.\n\nThe video then returns to the outdoor event, capturing intimate moments among attendees. One frame shows a person in a cap and white shirt walking away while on a phone call, while another close-up features a person partially obscured by a blue object, such as a flag or clothing, with warm, dim lighting adding to the scene\u2019s intimacy. A final close-up highlights another attendee with a slight smile and playful expression, their face the focal point against a blurred background.\n\nThroughout, the atmosphere remains energetic and social, blending the excitement of a public gathering with the interactive fun of an arcade setting. The recurring sponsorship by \"Red Bull\" and \"BOXXER\" ties the scenes together, reinforcing the theme of boxing or combat sports entertainment.\n\n---",
+  "cost": {
+    "estimate": {
+      "tokens_per_image": 1176,
+      "input_tokens": 22344,
+      "output_tokens_est": 400,
+      "input_cost_eur": 0.00268128,
+      "output_cost_eur": 0.0002,
+      "total_eur": 0.00288128,
+      "price_input_per_M": 0.12,
+      "price_output_per_M": 0.5
+    },
+    "actual": {
+      "input_tokens": 24659,
+      "cached_input_tokens": 0,
+      "output_tokens": 1222,
+      "input_cost_eur": 0.00295908,
+      "output_cost_eur": 0.000611,
+      "total_eur": 0.0035700799999999998
+    },
+    "batches": 4
+  }
+}

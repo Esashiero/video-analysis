@@ -1,0 +1,27 @@
+{
+  "model": "mistral-small-2603",
+  "duration_sec": 18.3,
+  "num_frames": 37,
+  "description": "Here\u2019s a merged, coherent, and chronological description of the entire video, with redundancy removed:\n\n---\n\nThe video captures a lively night at an amusement park or carnival, blending fairground games, arcade activities, and promotional branding into a single festive experience.\n\nThe scene opens with adults casually dressed in T-shirts, jeans, and sneakers playing a ball-toss game at a brightly lit stall. The targets are stacks of plastic bottles or cans, and prizes like stuffed toys are displayed nearby. The stall is branded with **\"Monster\"** and **\"Red Bull\"**, with both logos prominently visible on banners and signage. As the adults engage in the game, one person throws a ball at the targets while another walks away, adding to the casual, fun atmosphere.\n\nAmidst the crowd, a young child\u2014likely a boy\u2014appears barefoot, wearing a white T-shirt and dark shorts with a colorful design. He walks toward the camera, passing by stacks of **Red Bull** and **Monster Energy** drink cans in the background, which are part of a promotional setup. The environment is festive, with bright lights, banners, and a lively crowd. A large **Red Bull** sign and branding suggest a possible sporting or boxing-related event, reinforced by \"BOXER\" and \"FIGHTER\" text on nearby displays.\n\nThe child then moves toward an arcade area, where he plays an **arcade boxing game**. He wears a dark-colored shirt with a \"Boxer\" logo on the back. The game screen shows a score of **902** (with a high score of 978) and a credit count of 7, set against a vibrant boxing ring animation. The arcade\u2019s dynamic lighting and colorful graphics enhance the energetic mood.\n\nNext, the child transitions to an **arcade racing game**, now wearing a white T-shirt with a graphic design. He actively plays using a steering wheel and pedals, with the game displaying a score of **824** and a speed of **98 km/h** on a racing track. The arcade is bustling with other colorful machines and people in the background, creating a busy, immersive gaming environment.\n\nThe video concludes with a broader nighttime scene at the amusement park. Adults and children mingle in the brightly lit area, with a roller coaster and other rides visible in the background. An adult male in a white T-shirt and black cap holds a drink in a clear plastic cup, while **Red Bull** branding\u2014including \"BOXING\" and \"FIGHTER\" text\u2014appears on large screens and banners. A scoreboard displays numbers like **902** and **978**, reinforcing the event\u2019s competitive or promotional theme. The overall atmosphere is energetic and festive, typical of a night at the carnival.\n\n---\n\nThis version weaves all the fragments into a smooth, chronological narrative while preserving key details and eliminating repetition.",
+  "cost": {
+    "estimate": {
+      "tokens_per_image": 1176,
+      "input_tokens": 43512,
+      "output_tokens_est": 400,
+      "input_cost_eur": 0.00522144,
+      "output_cost_eur": 0.0002,
+      "total_eur": 0.00542144,
+      "price_input_per_M": 0.12,
+      "price_output_per_M": 0.5
+    },
+    "actual": {
+      "input_tokens": 47402,
+      "cached_input_tokens": 0,
+      "output_tokens": 1586,
+      "input_cost_eur": 0.00568824,
+      "output_cost_eur": 0.000793,
+      "total_eur": 0.00648124
+    },
+    "batches": 6
+  }
+}

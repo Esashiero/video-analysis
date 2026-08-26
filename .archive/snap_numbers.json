@@ -1,0 +1,29 @@
+{
+  "model": "mistral-small-2603",
+  "duration_sec": 18.3,
+  "fps": 2.0,
+  "num_frames": 37,
+  "template": "numbers",
+  "description": "Here is the merged, chronological description of the video frames, with redundancy removed and the sequence logically ordered:\n\n---\n\nThe video begins with a blue banner in the top-left corner displaying the **Red Bull** logo, followed by the word **\"BOXING\"** in the same area. Near the center of the banner, the number **\"11\"** is visible. In the top-right corner of the banner, the text **\"MOM\"** appears.\n\nA **Monster Energy** can is prominently featured, with multiple nutritional and volume details visible on its label, including:\n- **\"MONSTER\"**\n- **\"355 mL\"**\n- **\"2.25\"**\n- **\"24.5\"**\n- **\"237\"**\n- **\"16.9\"**\n- **\"1\"**\n- **\"REBEL\"**\n\nThe scene transitions to a central display where the word **\"BOXER\"** is shown, followed by the numbers **\"902\"** and **\"978\"**. To the right, a countdown appears with the numbers **\"1000\"**, **\"900\"**, **\"800\"**, **\"700\"**, **\"600\"**, **\"500\"**, **\"400\"**, **\"300\"**, **\"200\"**, and **\"100\"**.\n\nIn the top-right corner, a blurry text reads **\"9 3/4\"**. On an arcade machine, the words **\"MIGHTY MONSTERS\"** are displayed in the center-right, while **\"1\"** appears in the center-left.\n\nFurther into the sequence, the number **\"2\"** appears mid-right, followed by the **Red Bull** logo again at the top-center. The word **\"BOXER\"** is visible mid-left, with the numbers **\"902\"** and **\"978\"** at the bottom-left.\n\n---",
+  "cost": {
+    "estimate": {
+      "tokens_per_image": 1176,
+      "input_tokens": 43512,
+      "output_tokens_est": 400,
+      "input_cost_eur": 0.00522144,
+      "output_cost_eur": 0.0002,
+      "total_eur": 0.00542144,
+      "price_input_per_M": 0.12,
+      "price_output_per_M": 0.5
+    },
+    "actual": {
+      "input_tokens": 46841,
+      "cached_input_tokens": 0,
+      "output_tokens": 730,
+      "input_cost_eur": 0.00562092,
+      "output_cost_eur": 0.000365,
+      "total_eur": 0.00598592
+    },
+    "batches": 6
+  }
+}
