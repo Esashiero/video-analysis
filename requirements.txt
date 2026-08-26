@@ -1,0 +1,6 @@
+# Mistral video-analyzer toolset
+# ffmpeg is required as a SYSTEM binary (already installed on this box).
+opencv-python-headless>=4.9
+numpy>=1.24
+mistralai>=2.4.8
+python-dotenv>=1.0
